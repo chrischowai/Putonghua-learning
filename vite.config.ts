@@ -23,18 +23,8 @@ export default defineConfig(({ mode }) => {
         target: 'es2015',
         minify: 'terser',
         rollupOptions: {
-          output: {
-            manualChunks: (id) => {
-              if (id.includes('node_modules')) {
-                if (id.includes('react') || id.includes('react-dom')) {
-                  return 'vendor';
-                }
-                if (id.includes('lucide')) {
-                  return 'lucide';
-                }
-                return 'vendor';
-              }
-            }
+          input: {
+            main: path.resolve(__dirname, 'index.html')
           }
         }
       }
