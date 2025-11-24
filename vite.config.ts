@@ -24,9 +24,16 @@ export default defineConfig(({ mode }) => {
         minify: 'terser',
         rollupOptions: {
           output: {
-            manualChunks: {
-              vendor: ['react', 'react-dom'],
-              lucide: ['lucide-react']
+            manualChunks: (id) => {
+              if (id.includes('node_modules')) {
+                if (id.includes('react') || id.includes('react-dom')) {
+                  return 'vendor';
+                }
+                if (id.includes('lucide')) {
+                  return 'lucide';
+                }
+                return 'vendor';
+              }
             }
           }
         }

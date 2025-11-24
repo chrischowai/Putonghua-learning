@@ -21,13 +21,13 @@
         40% {transform: translateY(-20px);}
         60% {transform: translateY(-10px);}
       }
-      
+
       /* Animations for games */
       @keyframes swimLeft {
         from { transform: translateX(110vw); }
         to { transform: translateX(-20vw); }
       }
-      
+
       @keyframes swimRight {
         from { transform: translateX(-20vw) scaleX(-1); }
         to { transform: translateX(110vw) scaleX(-1); }
@@ -50,7 +50,7 @@
         25% { transform: translateX(-5px); }
         75% { transform: translateX(5px); }
       }
-      
+
       @keyframes pop {
         0% { transform: scale(1); }
         50% { transform: scale(1.2); }
@@ -85,7 +85,7 @@
       .animate-float-balloon {
         animation: floatBalloon 3s ease-in-out infinite;
       }
-      
+
       /* Bubble animation classes */
       .bubble {
         position: absolute;
@@ -94,31 +94,21 @@
         border-radius: 50%;
         animation: floatUp linear infinite;
       }
-      
+
       /* Custom scrollbar for game areas */
       ::-webkit-scrollbar {
         width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: rgba(0,0,0,0.05); 
+        background: rgba(0,0,0,0.05);
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb {
-        background: rgba(0,0,0,0.2); 
+        background: rgba(0,0,0,0.2);
         border-radius: 4px;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
-  }
-}
-</script>
-</head>
+  </head>
   <body>
     <div id="root"></div>
   </body>
