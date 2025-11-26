@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { VOCAB_BRIDGE_DATA } from '../../data';
-import { speak, playSoundEffect } from '../../services/audioService';
+import { speakSync as speak, playSoundEffect } from '../../services/audioService';
 import { ArrowLeft, CheckCircle2, Volume2 } from 'lucide-react';
 import { Vocabulary } from '../../types';
 

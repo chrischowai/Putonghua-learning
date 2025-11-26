@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { RHYME_GAME_DATA, VOCABULARY_DB } from '../../data';
-import { speak, playSoundEffect } from '../../services/audioService';
+import { speakSync as speak, playSoundEffect } from '../../services/audioService';
 import { ArrowLeft, Play, TrainFront, Cloud } from 'lucide-react';
 import { Vocabulary } from '../../types';
 

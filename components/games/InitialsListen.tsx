@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { speak, playSoundEffect } from '../../services/audioService';
+import { speakSync as speak, playSoundEffect } from '../../services/audioService';
 import { ArrowLeft, Music, Star, Zap, Play } from 'lucide-react';
 
 interface InitialsListenProps {

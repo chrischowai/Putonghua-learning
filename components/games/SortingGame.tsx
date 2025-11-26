@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { SORTING_DATA, TONE_DATA } from '../../data';
-import { speak, playSoundEffect } from '../../services/audioService';
+import { speakSync as speak, playSoundEffect } from '../../services/audioService';
 import { ArrowLeft, Volume2, Sparkles } from 'lucide-react';
 import { Vocabulary } from '../../types';
 

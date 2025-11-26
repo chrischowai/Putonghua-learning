@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PINYIN_MATCH_DATA } from '../../data';
-import { speak, playSoundEffect } from '../../services/audioService';
+import { speakSync as speak, playSoundEffect } from '../../services/audioService';
 import { ArrowLeft, Star, Volume2 } from 'lucide-react';
 
 interface PinyinMatchProps {

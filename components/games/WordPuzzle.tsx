@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { WORD_PUZZLE_DATA } from '../../data';
-import { speak, playSoundEffect } from '../../services/audioService';
+import { speakSync as speak, playSoundEffect } from '../../services/audioService';
 import { ArrowLeft, RefreshCw, Volume2, Hammer } from 'lucide-react';
 
 interface WordPuzzleProps {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { getAllVocabulary } from '../../data';
-import { speak, playSoundEffect } from '../../services/audioService';
+import { speakSync, playSoundEffect } from '../../services/audioService';
 import { ArrowLeft, Play, XCircle, CheckCircle2, Ship } from 'lucide-react';
 import { Vocabulary } from '../../types';
 
@@ -120,7 +120,7 @@ export const FishingGame: React.FC<FishingGameProps> = ({ onBack, onScoreUpdate 
     if (!isPlaying || isPaused || fish.isCaught) return;
     setIsPaused(true);
     setSelectedFish(fish);
-    speak(fish.char);
+    speakSync(fish.char);
   };
 
   const confirmCatch = () => {
@@ -130,7 +130,7 @@ export const FishingGame: React.FC<FishingGameProps> = ({ onBack, onScoreUpdate 
       playSoundEffect('correct');
       setScore(s => s + 10);
       onScoreUpdate(10);
-      speak("做得好!");
+      speakSync("做得好!");
       
       // Floating points animation
       const id = Date.now();
@@ -150,7 +150,7 @@ export const FishingGame: React.FC<FishingGameProps> = ({ onBack, onScoreUpdate 
       }, 500);
     } else {
       playSoundEffect('wrong');
-      speak("哎呀，錯了！");
+      speakSync("哎呀，錯了！");
     }
 
     setSelectedFish(null);
@@ -168,7 +168,7 @@ export const FishingGame: React.FC<FishingGameProps> = ({ onBack, onScoreUpdate 
     setScore(0);
     setTimeLeft(45);
     setFishes([]);
-    speak(`釣起以 ${targetInitial} 開頭的魚`);
+    speakSync(`釣起以 ${targetInitial} 開頭的魚`);
   };
 
   return (

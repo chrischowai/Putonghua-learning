@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getToneData } from '../../data';
-import { speak, playSoundEffect } from '../../services/audioService';
+import { speakSync as speak, playSoundEffect } from '../../services/audioService';
 import { Volume2, ArrowLeft, RefreshCw, Star } from 'lucide-react';
 import { Vocabulary } from '../../types';
 
